@@ -29,6 +29,7 @@ function ListingsScreen({ navigation }) {
           </>
         )}
         <FlatList
+          showsVerticalScrollIndicator={false}
           data={getListingsApi.data}
           keyExtractor={(listing) => listing.id.toString()}
           renderItem={({ item }) => (
@@ -48,7 +49,7 @@ function ListingsScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   screen: {
-    padding: 20,
+    padding: 10,
     backgroundColor: colors.light,
   },
 });
